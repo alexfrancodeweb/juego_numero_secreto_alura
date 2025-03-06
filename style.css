@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+}
+
+.container {
+    width: 95%;
+    max-width:  1100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: cover;
+    padding:2rem;
+    position: relative;
+    text-align: center;
+    margin-top: 15%;
+ 
+}
+
+.container__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container__informaciones {
+    width: 100%;
+    padding: 2rem;
+}
+
+.container__boton {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.container__boton:disabled {
+    background: #898989;
+}
+
+.container__texto {
+    margin: 12px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+.container__input {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 1rem;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+ 
+}
+
+.container__botones {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 42px;  /* 🔹 Se redujo el tamaño para evitar que se corte */
+    padding-bottom: 1.5rem; /* 🔹 Se ajustó la separación */
+    word-wrap: break-word; /* 🔹 Asegura que el texto se ajuste bien */
+    text-align: center;
+    max-width: 90%; /* 🔹 Se evita que el título sea más ancho que el contenedor */
+}
+
+
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+.texto__parrafo {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* 🔹📱 Media Query para móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .container__input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .container__boton {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .texto__parrafo {
+        font-size: 20px;
+    }
+}
